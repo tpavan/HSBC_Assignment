@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CurrencyExchange" verbose="1">
+    <test name="CurrencyExchangeRates">
+        <classes>
+            <class name="currencyexchange.runner.CucumberRunner"></class>
+        </classes>
+    </test>
+</suite>

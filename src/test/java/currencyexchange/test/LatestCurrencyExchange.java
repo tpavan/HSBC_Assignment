@@ -1,5 +1,8 @@
 package currencyexchange.test;
 
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import currencyexchange.config.GlobalMembers;
 import currencyexchange.domain.currencyExchange.CurrencyExchRates;
 import currencyexchange.flows.CurrencyExchangeFlows;
@@ -14,8 +17,12 @@ public class LatestCurrencyExchange {
     private CurrencyExchRates latestCurrencyExchRates = null;
     private SoftAssert softAssert = new SoftAssert();
 
+    @Given("Rates API for Latest Foreign Exchange rates")
+    public void configureCurrencyAPI(){
 
-    @Test
+    }
+
+    @When("The API is available")
     public void validateCurrencyExchangeServiceIsWorking(){
         response = currencyExchangeFlows.getLatestCurrencyExchangeRates();
         softAssert.assertTrue(response.getStatusCode() == GlobalMembers.OKStatusCode,"Currency exchange service is not working");
@@ -23,7 +30,7 @@ public class LatestCurrencyExchange {
         softAssert.assertAll();
     }
 
-    @Test
+    @Then("An automated test suite should run which will assert the success status of the response")
     public void validateCurrencyExchangeRateForINR(){
         response = currencyExchangeFlows.getLatestCurrencyExchangeRates();
         softAssert.assertTrue(response.getStatusCode() == GlobalMembers.OKStatusCode,"Currency exchange service is not working");
