@@ -8,6 +8,6 @@ Maven
 
 How to run suite:
 1. Execute CucumberRunner.class which pick up the feature and run the associated the java step defination
-2. To run through maven run mvn test commend
+2. To run through maven run mvn test commend from project root directory
 
 
