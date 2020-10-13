@@ -2,7 +2,7 @@ package currencyexchange.domain.currencyExchange;
 
 import com.google.gson.annotations.SerializedName;
 
-public class LatestCurrencyExchRates{
+public class CurrencyExchRates{
 
 	@SerializedName("date")
 	private String date;
